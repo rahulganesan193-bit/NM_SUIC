@@ -1,0 +1,18 @@
+{
+  "ui_policy": {
+    "short_description": "High Impact Control",
+    "table": "incident",
+    "conditions": "impact=1^EQ",
+    "condition_readable": "Impact is 1 - High",
+    "on_load": true,
+    "reverse_if_false": true,
+    "global": true,
+    "active": true
+  },
+  "ui_policy_actions": [
+    { "field": "assigned_to",      "mandatory": "true",   "visible": "ignore", "disabled": "ignore", "purpose": "Require an owner for High impact incidents" },
+    { "field": "assignment_group", "mandatory": "true",   "visible": "ignore", "disabled": "ignore", "purpose": "Require routing group for High impact incidents" },
+    { "field": "urgency",          "mandatory": "ignore", "visible": "ignore", "disabled": "true",   "purpose": "Lock Urgency (read-only) while Impact is High" }
+  ],
+  "reverse_behaviour": "When Impact is NOT High: Assigned to / Assignment group stop being mandatory and Urgency becomes editable again."
+}
