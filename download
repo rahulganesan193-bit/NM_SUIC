@@ -1,8 +1,0 @@
-# ServiceNow project local files
-*.log
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.tmp
-*.bak

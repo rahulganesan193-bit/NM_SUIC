@@ -1,0 +1,16 @@
+# Prerequisites & System Configuration
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+node_modules/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+
+# Local scratch files
+scratch/
+temp/
